@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int type, units, bill=0;
+    scanf("%d %d", &type, &units);
+
+    switch(type) {
+        case 1:
+            if(units <= 30)
+                bill = units * 5;
+            else
+                bill = 30*5 + (units-30)*8;
+            break;
+
+        case 2:
+            bill = units * 10;
+            break;
+
+        default:
+            printf("Invalid Type");
+            return 0;
+    }
+
+    printf("Bill ₹%d", bill);
+    return 0;
+}

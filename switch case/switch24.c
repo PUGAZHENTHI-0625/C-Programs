@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int callType, minutes, charge=0;
+    scanf("%d %d", &callType, &minutes);
+
+    switch(callType) {
+        case 1: charge = minutes * 1; break;
+        case 2: charge = minutes * 3; break;
+        case 3: charge = minutes * 10; break;
+        default: printf("Invalid"); return 0;
+    }
+
+    printf("Call Charge ₹%d", charge);
+    return 0;
+}
